@@ -1,9 +1,9 @@
 {
-  "name": "skinny-bones-jekyll",
+  "name": "Whimsical Reader",
   "version": "1.0.0",
   "private": true,
-  "description": "A Jekyll starter site",
-  "author": "Michael Rose <michael@mademistakes.com>",
+  "description": "whimsicalreader.com",
+  "author": "Zake",
   "homepage": "http://mademistakes.com/",
   "license": "The MIT License (MIT)",
   "devDependencies": {
