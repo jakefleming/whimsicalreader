@@ -3,9 +3,10 @@ layout: book
 title: The Day The Crayons Quit
 author: Drew Daywalt
 format: Hardcover
+imageBase: books/the-day-the-crayons-quit/
 image:
-  teaser: the-day-the-crayons-quit.jpg
-  feature: the-day-the-crayons-quit.jpg
+  teaser: the-day-the-crayons-quit-cover.jpg
+  cover: the-day-the-crayons-quit-cover.jpg
 seller: Amazon
 sellerUrl: https://www.amazon.com/gp/product/0399255370/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=whimsicalread-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0399255370&linkId=2acc2ee2cf243893c53ea1ea5b75eb7c
 description: "Poor Duncan just wants to color. But when he opens his box of crayons, he finds only letters, all saying the same thing: His crayons have had enough! They quit! Beige Crayon is tired of playing second fiddle to Brown Crayon. Black wants to be used for more than just outlining. Blue needs a break from coloring all those bodies of water. And Orange and Yellow are no longer speaking—each believes he is the true color of the sun.

@@ -3,9 +3,10 @@ layout: book
 title: The Very Hungry Caterpillar
 author: Eric Carle
 format: board-book
+imageBase: books/the-very-hungry-caterpillar/
 image:
-  teaser: the-very-hungry-caterpillar.jpg
-  feature: the-very-hungry-caterpillar.jpg
+  teaser: the-very-hungry-caterpillar-cover.jpg
+  cover: the-very-hungry-caterpillar-cover.jpg
 seller: Amazon
 sellerUrl: https://www.amazon.com/gp/product/0399226907/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=whimsicalread-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0399226907&linkId=40e3494f4eb6446f651a016a32122209
 description: "One Sunday morning, a red-faced caterpillar hatches from an egg, and begins to look for some food. He eats through increasing quantities of fruit on the following five days, one apple on Monday, two pears on Tuesday, three plums on Wednesday, four strawberries on Thursday, and five oranges on Friday, and then, on Saturday, he has an enormous feast. By the end of Saturday, the inevitable happens and he is ill. After recovering from a stomach-ache, he returns to a more sensible diet by eating through a large green leaf before spinning a cocoon in which he remains for the following 2 weeks. Later, the 'big fat caterpillar' emerges as a beautiful butterfly with large, gorgeous, multi-coloured wings."

@@ -18,15 +18,15 @@ A graduate of the Art Center College of Design in Pasadena, Young has since taug
 Young lives in Westchester County, New York, with his two daughters."
 illustrator: Ed Young
 format: Hardcover
-imageBase: books/cat-hunger-mountain/
+imageBase: books/the-cat-from-hunger-mountain/
 image:
-  teaser: cat-hunger-mountain-01.jpg
-  cover: cat-hunger-mountain-cover.jpg
+  teaser: the-cat-from-hunger-mountain-01.jpg
+  cover: the-cat-from-hunger-mountain-cover.jpg
   gallery:
-    - cat-hunger-mountain-01.jpg
-    - cat-hunger-mountain-02.jpg
-    - cat-hunger-mountain-03.jpg
-    - cat-hunger-mountain-04.jpg
+    - the-cat-from-hunger-mountain-01.jpg
+    - the-cat-from-hunger-mountain-02.jpg
+    - the-cat-from-hunger-mountain-03.jpg
+    - the-cat-from-hunger-mountain-04.jpg
 seller: Amazon
 sellerUrl: https://www.amazon.com/Cat-Hunger-Mountain-Ed-Young/dp/0399172785
 excerpt: Caldecott Medalist Ed Young delivers a visually stunning, poignant story about humility, wastefulness, and appreciating what one has.

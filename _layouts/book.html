@@ -11,12 +11,12 @@ layout: default
     </div>
     <div class="book__meta">
       <h3>Meta data</h3>
-      {{ page.author | prepend: "<p><em>Author:</em> " | append: "</p>" }}
-      {{ page.illustrator | prepend: "<p><em>Illustrator:</em> " | append: "</p>" }}
-      {{ page.rating.writing | prepend: "<p><em>Writing Score:</em> " | append: "</p>" }}
-      {{ page.rating.art | prepend: "<p><em>Art Score:</em> " | append: "</p>" }}
-      {{ page.rating.agony | prepend: "<p><em>Parental Agony Score:</em> " | append: "</p>" }}
-      {{ page.age | prepend: "<p><em>Good for ages:</em> " | append: "</p>" }}
+      {% if page.author %}{{ page.author | prepend: "<p><em>Author:</em> " | append: "</p>" }}{% endif %}
+      {% if page.illustrator %}{{ page.illustrator | prepend: "<p><em>Illustrator:</em> " | append: "</p>" }}{% endif %}
+      {% if page.rating.writing %}{{ page.rating.writing | prepend: "<p><em>Writing Score:</em> " | append: "</p>" }}{% endif %}
+      {% if page.rating.art %}{{ page.rating.art | prepend: "<p><em>Art Score:</em> " | append: "</p>" }}{% endif %}
+      {% if page.rating.agony %}{{ page.rating.agony | prepend: "<p><em>Parental Agony Score:</em> " | append: "</p>" }}{% endif %}
+      {% if page.age %}{{ page.age | prepend: "<p><em>Good for ages:</em> " | append: "</p>" }}{% endif %}
     </div>
     <h3>Description</h3>
     <p>

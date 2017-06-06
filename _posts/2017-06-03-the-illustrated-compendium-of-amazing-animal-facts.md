@@ -3,9 +3,10 @@ layout: book
 title: The Illustrated Compendium Of Amazing Animal Facts
 author: Maja Säfström
 format: Hardcover
+imageBase: books/the-illustrated-compendium-of-amazing-animal-facts/
 image:
-  teaser: the-illustrated-compendium-of-amazing-animal-facts.jpg
-  feature: the-illustrated-compendium-of-amazing-animal-facts.jpg
+  teaser: the-illustrated-compendium-of-amazing-animal-facts-cover.jpg
+  cover: the-illustrated-compendium-of-amazing-animal-facts-cover.jpg
 seller: Amazon
 sellerUrl: https://www.amazon.com/gp/product/1607748320/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=whimsicalread-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1607748320&linkId=9f08db838f546c27ddba99037c4af2be
 description: "An artfully playful collection of unexpected and remarkable facts about animals, illustrated by Swedish artist Maja Säfström.
