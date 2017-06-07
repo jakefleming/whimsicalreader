@@ -1,0 +1,280 @@
+// All styles related to surgical css
+
+// remove margin
+.strip {
+  &-top {
+    margin-top: 0!important;
+  }
+
+  &-bottom {
+    margin-bottom: 0!important;
+  }
+
+  &-all {
+    margin: 0!important;
+  }
+
+  &-vertical {
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+  }
+
+  &-horizontal {
+    margin-left: 0!important;
+    margin-right: 0!important;
+  }
+}
+
+// remove padding
+.lean {
+  &-top {
+    padding-top: 0!important;
+  }
+
+  &-bottom {
+    padding-bottom: 0!important;
+  }
+
+  &-all {
+    padding: 0!important;
+  }
+
+  &-vertical {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+  }
+
+  &-horizontal {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+}
+
+// add margin
+.shim {
+  &-top {
+    &-third {
+      margin-top: $lead-third!important;
+    }
+    &-half {
+      margin-top: $lead-half!important;
+    }
+    &-single {
+      margin-top: $lead-single!important;
+    }
+    &-double {
+      margin-top: $lead-double!important;
+    }
+    &-triple {
+      margin-top: $lead-triple!important;
+    }
+    &-quadruple {
+      margin-top: $lead-quadruple!important;
+    }
+    &-quintuple {
+      margin-top: $lead-quintuple!important;
+    }
+  }
+
+  &-right {
+    &-third {
+      margin-right: $lead-third!important;
+    }
+    &-half {
+      margin-right: $lead-half!important;
+    }
+    &-single {
+      margin-right: $lead-single!important;
+    }
+    &-double {
+      margin-right: $lead-double!important;
+    }
+    &-triple {
+      margin-right: $lead-triple!important;
+    }
+    &-quadruple {
+      margin-right: $lead-quadruple!important;
+    }
+    &-quintuple {
+      margin-right: $lead-quintuple!important;
+    }
+  }
+
+  &-bottom {
+    &-third {
+      margin-bottom: $lead-third!important;
+    }
+    &-half {
+      margin-bottom: $lead-half!important;
+    }
+    &-single {
+      margin-bottom: $lead-single!important;
+    }
+    &-double {
+      margin-bottom: $lead-double!important;
+    }
+    &-triple {
+      margin-bottom: $lead-triple!important;
+    }
+    &-quadruple {
+      margin-bottom: $lead-quadruple!important;
+    }
+    &-quintuple {
+      margin-bottom: $lead-quintuple!important;
+    }
+  }
+
+  &-left {
+    &-third {
+      margin-left: $lead-third!important;
+    }
+    &-half {
+      margin-left: $lead-half!important;
+    }
+    &-single {
+      margin-left: $lead-single!important;
+    }
+    &-double {
+      margin-left: $lead-double!important;
+    }
+    &-triple {
+      margin-left: $lead-triple!important;
+    }
+    &-quadruple {
+      margin-left: $lead-quadruple!important;
+    }
+    &-quintuple {
+      margin-left: $lead-quintuple!important;
+    }
+  }
+}
+
+// add padding
+.pad {
+  &-top {
+    &-third {
+      padding-top: $lead-third!important;
+    }
+    &-half {
+      padding-top: $lead-half!important;
+    }
+    &-single {
+      padding-top: $lead-single!important;
+    }
+    &-double {
+      padding-top: $lead-double!important;
+    }
+    &-triple {
+      padding-top: $lead-triple!important;
+    }
+    &-quadruple {
+      padding-top: $lead-quadruple!important;
+    }
+    &-quintuple {
+      padding-top: $lead-quintuple!important;
+    }
+  }
+
+  &-right {
+    &-third {
+      padding-right: $lead-third!important;
+    }
+    &-half {
+      padding-right: $lead-half!important;
+    }
+    &-single {
+      padding-right: $lead-single!important;
+    }
+    &-double {
+      padding-right: $lead-double!important;
+    }
+    &-triple {
+      padding-right: $lead-triple!important;
+    }
+    &-quadruple {
+      padding-right: $lead-quadruple!important;
+    }
+    &-quintuple {
+      padding-right: $lead-quintuple!important;
+    }
+  }
+
+  &-bottom {
+    &-third {
+      padding-bottom: $lead-third!important;
+    }
+    &-half {
+      padding-bottom: $lead-half!important;
+    }
+    &-single {
+      padding-bottom: $lead-single!important;
+    }
+    &-double {
+      padding-bottom: $lead-double!important;
+    }
+    &-triple {
+      padding-bottom: $lead-triple!important;
+    }
+    &-quadruple {
+      padding-bottom: $lead-quadruple!important;
+    }
+    &-quintuple {
+      padding-bottom: $lead-quintuple!important;
+    }
+  }
+
+  &-left {
+    &-third {
+      padding-left: $lead-third!important;
+    }
+    &-half {
+      padding-left: $lead-half!important;
+    }
+    &-single {
+      padding-left: $lead-single!important;
+    }
+    &-double {
+      padding-left: $lead-double!important;
+    }
+    &-triple {
+      padding-left: $lead-triple!important;
+    }
+    &-quadruple {
+      padding-left: $lead-quadruple!important;
+    }
+    &-quintuple {
+      padding-left: $lead-quintuple!important;
+    }
+  }
+}
+
+// floats
+.float {
+  &-left {
+    float: left;
+  }
+  &-right {
+    float: right;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+// flex
+.flex {
+  display: flex;
+}
+
+// Internal anchors
+
+.internal-anchor {
+  position: relative;
+
+  &__offset {
+    position: absolute;
+    top: -$navbar-height;
+  }
+}

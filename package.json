@@ -1,11 +1,13 @@
 {
-  "name": "Whimsical Reader",
+  "name": "whimsicalReader",
   "version": "1.0.0",
   "private": true,
   "description": "whimsicalreader.com",
   "author": "Zake",
-  "homepage": "http://mademistakes.com/",
-  "license": "The MIT License (MIT)",
+  "homepage": "http://whimsicalreader.com/",
+  "scripts": {
+    "start": "npm install && bundle exec jekyll serve"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.8.0",
@@ -15,6 +17,11 @@
     "grunt-svgmin": "~0.3.1",
     "grunt-imgcompress": "~0.1.1",
     "grunt-newer": "^0.7.0",
-    "grunt-surround": "^0.1.0"
+    "grunt-surround": "^0.1.0",
+    "mediaelement": "3.2.3",
+    "normalize.css": "^4.0.0",
+    "scrollmagic": "^2.0.5",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll"
+
   }
 }

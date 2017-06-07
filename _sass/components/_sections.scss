@@ -1,0 +1,44 @@
+.section {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  &--separated {
+    box-shadow: inset 0 1px 0 0 $section-border-color;
+  }
+
+  &--accent {
+    background: $base-color-accent;
+    color: white;
+
+    &::after {
+      background: transparentize((darken($base-color-accent, 70%)),.3);
+    }
+  }
+  &--primary {
+    background: $base-color-primary;
+    color: white;
+
+    &::after {
+      background: transparentize((darken($base-color-primary, 70%)),.3);
+    }
+  }
+  &--neutral-1 {
+    background: palette(neutral, C1);
+  }
+  &--neutral-2 {
+    background: palette(neutral, C2);
+  }
+  &--neutral-3 {
+    background: palette(neutral, C3);
+  }
+  &--hero {
+    padding-top: ( $section-padding * 2 );
+    padding-bottom: ( $section-padding * 2 );
+  }
+}
+
+.nav--fixed + .section {
+  padding-top: ( $section-padding * 2 ) + $nav-logo-size + $navbar-padding;
+}

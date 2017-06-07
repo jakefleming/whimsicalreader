@@ -1,0 +1,37 @@
+.alert {
+  border-radius: $border-radius-1;
+  color: $alert-font-color;
+  font-family: $display-stack;
+  padding: $lead-half;
+  position: relative;
+  &__body {
+    padding-right: $lead-double;
+  }
+  &__dismiss {
+    @extend .icon;
+    @extend .icon--x;
+    color: rgba(0,0,0,.2);
+    cursor: pointer;
+    line-height: $line-height;
+    padding: $lead-half;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .3s;
+    &:hover {
+      color: white;
+    }
+  }
+  &--error {
+    background: $alert-error-bg-color;
+  }
+  &--warning {
+    background: $alert-warning-bg-color;
+  }
+  &--info {
+    background: $alert-info-bg-color;
+  }
+  &--success {
+    background: $alert-success-bg-color;
+  }
+}

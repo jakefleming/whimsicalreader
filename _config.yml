@@ -12,7 +12,9 @@ feed:
 # Jekyll configuration
 
 sass:
-  sass_dir: _sass
+  load_paths:
+    - _sass
+    - node_modules
   style: compressed
 permalink: /:categories/:title/
 kramdown:

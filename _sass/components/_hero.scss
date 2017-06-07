@@ -1,0 +1,61 @@
+.hero {
+  background-color: $hero-bg-color;
+  background-position: center center;
+  background-size: cover;
+  color: $hero-font-color;
+  position: relative;
+  &__subheading {
+    font-size: $type-scale-4;
+    font-style: italic;
+    font-weight: $font-weight-normal;
+    line-height: $line-height;
+    text-align: center;
+  }
+  &__heading {
+    text-align: center;
+  }
+  &::after {
+    bottom: 0;
+    content: '';
+    left: 0;
+    right: 0;
+    position: absolute;
+    top:0;
+    z-index: 0;
+  }
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hero--dark {
+  &::after {
+    background: transparentize($base-color-accent-dark,.3);
+  }
+  .hero__heading, .hero__subheading {
+    color: white;
+  }
+  .hero__subheading {
+    color: white;
+  }
+}
+
+.hero--light {
+  &::after {
+    background: transparentize(white,.3);
+  }
+}
+
+.hero--accent {
+  background: $base-color-accent;
+  &::after {
+    background: transparentize(black,.7);
+  }
+  .hero__heading, .hero__subheading {
+    color: white;
+  }
+  .hero__subheading {
+    color: white;
+  }
+}

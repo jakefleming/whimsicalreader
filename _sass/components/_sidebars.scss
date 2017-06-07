@@ -1,0 +1,132 @@
+.flexible-container {
+  flex-direction: row;
+  display: flex;
+
+  &__side,
+  &__main {
+    transition: $transition-off;
+  }
+
+  &__side {
+    width: 200px;
+    min-width: 200px;
+  }
+
+  &__main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  &--collapsed {
+    .flexible-container__side,
+    .flexible-container__main {
+      transition: $transition-on;
+    }
+
+    .flexible-container__side {
+      width: $nav-side-width-collapsed;
+      min-width: $nav-side-width-collapsed;
+    }
+
+    .sidebar--fixed {
+      width: $nav-side-width-collapsed !important;
+    }
+
+    .sidebar__nav-link .text {
+      left: -$nav-side-width;
+    }
+
+    .sidebar__closer__trigger {
+      padding-right: 0;
+    }
+
+    .flexible-container__main {
+      width: 100%;
+    }
+  }
+}
+
+.sidebar {
+  padding-top: $lead-half;
+  background: $nav-side-bg-color;
+  position: relative;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &--fixed {
+    z-index: 50;
+    width: $nav-side-width !important;
+    margin-left: 0 !important;
+  }
+
+  &__nav-link {
+    @extend .clear;
+    color: $nav-side-link-font-color;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+
+    .icon,
+    .text {
+      transition: $transition-off;
+      display: block;
+      float: left;
+      line-height: $line-height;
+      padding: $lead-half 0;
+    }
+
+    .icon {
+      font-size: 80%;
+      width: $nav-side-width-collapsed;
+      background: $nav-side-bg-color;
+      position: relative;
+      z-index: 2;
+    }
+
+    .text {
+      font-family: $ui-stack;
+      font-size: $type-scale-2;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: $nav-side-width - $nav-side-width-collapsed;
+      text-align: left;
+      position: absolute;
+      z-index: 1;
+      left: $nav-side-width-collapsed;
+    }
+
+    &:hover,
+    &:hover .icon,
+    &:hover .text {
+      background: $nav-side-link-bg-color-hover;
+      color: $nav-side-link-font-color-hover;
+      transition: $transition-on;
+    }
+
+    &:hover {
+      .text {
+        left: $nav-side-width-collapsed;
+      }
+    }
+  }
+
+  &__closer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    pointer-events: none;
+
+    &__trigger {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      pointer-events: all;
+      padding-right: $nav-side-width - $nav-side-width-collapsed;
+    }
+  }
+}

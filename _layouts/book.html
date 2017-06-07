@@ -1,78 +1,90 @@
 ---
 layout: default
 ---
-<div class="wrap">
-  <div class="page-content">
-    <h1>{{ page.title }}
-    <div class="book-cover">
-      <a href="{{ page.sellerUrl }}">
-        <img src="{{ site.url }}/images/{{ page.imageBase }}{{ page.image.cover }}" alt="Book cover for {{ page.title }}"/>
-      </a>
-    </div>
-    <div class="book__meta">
-      <h3>Meta data</h3>
-      {% if page.author %}{{ page.author | prepend: "<p><em>Author:</em> " | append: "</p>" }}{% endif %}
-      {% if page.illustrator %}{{ page.illustrator | prepend: "<p><em>Illustrator:</em> " | append: "</p>" }}{% endif %}
-      {% if page.rating.writing %}{{ page.rating.writing | prepend: "<p><em>Writing Score:</em> " | append: "</p>" }}{% endif %}
-      {% if page.rating.art %}{{ page.rating.art | prepend: "<p><em>Art Score:</em> " | append: "</p>" }}{% endif %}
-      {% if page.rating.agony %}{{ page.rating.agony | prepend: "<p><em>Parental Agony Score:</em> " | append: "</p>" }}{% endif %}
-      {% if page.age %}{{ page.age | prepend: "<p><em>Good for ages:</em> " | append: "</p>" }}{% endif %}
-    </div>
-    <h3>Description</h3>
-    <p>
-      {{ page.description }}
-    </p>
-    <p>
-      {% for tagCat in page.tagCategories %}
-        {% for tag in tagCat %}
-
-          {% for i in tag[1] %}
-            <span class="btn btn-info tag tag-{{ tag[0] }}">{{ i }}</span>
-          {% endfor %}
-
-        {% endfor %}
-      {% endfor %}
-    </p>
-    <section class="awards">
-      {% for award in page.awards %}
-        <div class="card award">
-          {{ award }}
+<section class="section section--separated">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs">
+        <h1>{{ page.title }}
+        <div class="book-cover">
+          <a href="{{ page.sellerUrl }}">
+            <img src="{{ site.url }}/images/{{ page.imageBase }}{{ page.image.cover }}" alt="Book cover for {{ page.title }}"/>
+          </a>
         </div>
-      {% endfor %}
-    </section>
-    <section class="press">
-      {% for press in page.press %}
+        <div class="book__meta">
+          <h3>Meta data</h3>
+          {% if page.author %}{{ page.author | prepend: "<p><em>Author:</em> " | append: "</p>" }}{% endif %}
+          {% if page.illustrator %}{{ page.illustrator | prepend: "<p><em>Illustrator:</em> " | append: "</p>" }}{% endif %}
+          {% if page.rating.writing %}{{ page.rating.writing | prepend: "<p><em>Writing Score:</em> " | append: "</p>" }}{% endif %}
+          {% if page.rating.art %}{{ page.rating.art | prepend: "<p><em>Art Score:</em> " | append: "</p>" }}{% endif %}
+          {% if page.rating.agony %}{{ page.rating.agony | prepend: "<p><em>Parental Agony Score:</em> " | append: "</p>" }}{% endif %}
+          {% if page.age %}{{ page.age | prepend: "<p><em>Good for ages:</em> " | append: "</p>" }}{% endif %}
+        </div>
+        <h3>Description</h3>
         <p>
-          <blockquote class="press__content">
-            &quot;{{ press.content }}&quot;
-          </blockquote>
-          <div class="press__author">
-            <strong>&mdash; {{ press.author }}</strong>
-          </div>
+          {{ page.description }}
         </p>
-      {% endfor %}
-    </section>
-    <section class="cta">
-      {{ page.format | prepend: "<p><em>Format:</em> " | append: "</p>" }}
-      <a href="{{ page.sellerUrl }}" class="btn btn-primary">View on {{page.seller}}</a>
-    </section>
-    <h3>Reviews from {{ page.seller }}</h3>
-    <ul style="list-style-type: none; padding: 0">
-    {% for review in page.reviews %}
-      <li style="margin-bottom: 3rem">
         <p>
-          <i>"{{ review.content | esc }}"</i>
+          {% for tagCat in page.tagCategories %}
+            {% for tag in tagCat %}
+
+              {% for i in tag[1] %}
+                <span class="btn btn-info tag tag-{{ tag[0] }}">{{ i }}</span>
+              {% endfor %}
+
+            {% endfor %}
+          {% endfor %}
         </p>
-        <p style="text-align: right">
-          - {{ review.author }}
-        </p>
-      </li>
-    {% endfor %}
-    </ul>
-    <section class="gallery">
-      {% for image in page.image.gallery %}
-        <img src="{{ site.url }}/images/{{ page.imageBase }}{{ image }}" alt="{{ page.title }} {{ forloop.index }}"/>
-      {% endfor %}
-    </section>
+        <section class="awards">
+          {% for award in page.awards %}
+            <div class="card award">
+              {{ award }}
+            </div>
+          {% endfor %}
+        </section>
+        <section class="press">
+          {% for press in page.press %}
+            <p>
+              <blockquote class="press__content">
+                &quot;{{ press.content }}&quot;
+              </blockquote>
+              <div class="press__author">
+                <strong>&mdash; {{ press.author }}</strong>
+              </div>
+            </p>
+          {% endfor %}
+        </section>
+        <section class="cta">
+          {{ page.format | prepend: "<p><em>Format:</em> " | append: "</p>" }}
+          <a href="{{ page.sellerUrl }}" class="btn btn-primary">View on {{page.seller}}</a>
+        </section>
+        <h3>Reviews from {{ page.seller }}</h3>
+        <ul style="list-style-type: none; padding: 0">
+        {% for review in page.reviews %}
+          <li style="margin-bottom: 3rem">
+            <p>
+              <i>"{{ review.content | esc }}"</i>
+            </p>
+            <p style="text-align: right">
+              - {{ review.author }}
+            </p>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs">
+        <section class="gallery">
+          {% for image in page.image.gallery %}
+            <figure>
+              <div class="image__wrapper" style="padding-top: 61.8%;">
+                <img class="image" src="{{ site.url }}/images/{{ page.imageBase }}{{ image }}" alt="{{ page.title }} {{ forloop.index }}" itemprop="image">
+              </div>
+            </figure>
+          {% endfor %}
+        </section>
+      </div>
+    </div>
   </div>
-</div>
+</section>

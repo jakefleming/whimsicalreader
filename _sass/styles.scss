@@ -1,11 +1,9 @@
----
-sitemap: false
----
-
 /*------------------------------------------------------------------------*\
   HELPERS
 \*------------------------------------------------------------------------*/
-@import 'helpers/normalize';
+@import 'normalize';
+@import 'mediaelementplayer';
+@import 'vendor/prism';
 @import 'helpers/color-palette';
 @import 'helpers/variables';
 @import 'helpers/mixins';

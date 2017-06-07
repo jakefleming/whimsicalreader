@@ -1,0 +1,51 @@
+$bg0:  hsla(0, 0, 0, 1);
+$bg1:  hsla(0, 0, 10, 1);
+$bg2:  hsla(0, 0, 20, 1);
+$bg3:  hsla(0, 0, 30, 1);
+$bg4:  hsla(0, 0, 40, 1);
+$bg5:  hsla(0, 0, 50, 1);
+$bg6:  hsla(0, 0, 60, 1);
+$bg7:  hsla(0, 0, 70, 1);
+$bg8:  hsla(0, 0, 80, 1);
+$bg9:  hsla(0, 0, 90, 1);
+$bg10: hsla(0, 0, 100, 1);
+$cl10: hsla(0, 0, 0, 1);
+$cl9:  hsla(0, 0, 10, 1);
+$cl8:  hsla(0, 0, 20, 1);
+$cl7:  hsla(0, 0, 30, 1);
+$cl6:  hsla(0, 0, 40, 1);
+$cl5:  hsla(0, 0, 50, 1);
+$cl4:  hsla(0, 0, 60, 1);
+$cl3:  hsla(0, 0, 70, 1);
+$cl2:  hsla(0, 0, 80, 1);
+$cl1:  hsla(0, 0, 90, 1);
+$cl0:  hsla(0, 0, 100, 1);
+
+.ambient {
+  .dark--0 { background-color: $bg0  !important;
+              color:            $cl0  !important; }
+  .dark--1 { background-color: $bg1  !important;
+              color:            $cl0  !important; }
+  .dark--2 { background-color: $bg2  !important;
+              color:            $cl0  !important; }
+  .dark--3 { background-color: $bg3  !important;
+              color:            $cl0  !important; }
+  .dark--4 { background-color: $bg4  !important;
+              color:            $cl0  !important; }
+  .dark--5 { background-color: $bg5  !important;
+              color:            $cl0  !important; }
+  .dark--6 { background-color: $bg6  !important;
+              color:            $cl10 !important; }
+  .dark--7 { background-color: $bg7  !important;
+              color:            $cl10 !important; }
+  .dark--8 { background-color: $bg8  !important;
+              color:            $cl10 !important; }
+  .dark--9 { background-color: $bg9  !important;
+              color:            $cl10 !important; }
+  .dark--10 { background-color:$bg10 !important;
+              color:            $cl10 !important; }
+}
+
+body {
+  transition: all 0.5s ease-in-out;
+}

@@ -1,0 +1,215 @@
+.nav {
+  padding: $navbar-padding;
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $nav-overlay-bg-color;
+    z-index: 5;
+    opacity: 0;
+    display: none;
+    transition: $transition-off;
+  }
+}
+
+.is-visible {
+
+  .nav__overlay {
+    display: block;
+    opacity: 0.65;
+    transition: $transition-on;
+  }
+
+  .nav__menu-toggle {
+    &:before {
+      content: "\e969" !important;
+      color: $nav-menu-toggle-font-color;
+      transform: rotate(180deg);
+      transition: all 0.35s ease-out;
+      display: block;
+    }
+  }
+}
+
+.nav.nav--top {
+  background-color: $navbar-bg-color;
+  .nav__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: $container-max-width;
+  }
+  .nav__links {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    list-style-type: none;
+    line-height: $line-height;
+    z-index: 10;
+    width: 100%;
+    .button {
+      &--primary {
+        color: $button-primary-font-color;
+      }
+      &--secondary {
+        color: $button-secondary-font-color;
+      }
+    }
+    li, a {
+      color: $navbar-link-font-color;
+      display: inline-block;
+      font-family: $ui-stack;
+      font-size: $type-scale-2;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      &:hover {
+        color: $navbar-link-font-color-hover;
+      }
+    }
+    li {
+      display: flex;
+      padding: 0 $lead-half;
+      position: relative;
+    }
+    a {
+      line-height: $nav-logo-size;
+    }
+    li:last-child {
+      padding-right: 0;
+    }
+    a.is-active {
+      color: $navbar-link-font-color-active;
+      &:before {
+        background: $navbar-link-indicator-bg-color;
+        content: '';
+        width: 100%;
+        height: $navbar-link-indicator-height;
+        bottom: -$navbar-padding;
+        left: 0;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.nav.nav--fixed {
+  box-shadow: $box-shadow-1;
+  position: fixed;
+  width: 100%;
+  z-index: map-get($z-index, navigation);
+}
+
+.nav.nav--transparent {
+  box-shadow: none;
+  background: transparent;
+}
+
+.nav__brand {
+  align-items: center;
+  display: flex;
+  flex-shrink: 1;
+  max-height: $nav-logo-size;
+}
+
+.nav__logo {
+  #{$headlineCopyTags}{
+    font-family: $ui-stack;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  svg, img {
+    height: $nav-logo-size;
+  }
+  + .nav__brand-text {
+    display: none;
+  }
+  #Color1, #Color1 path {
+    fill: white;
+  }
+  #Color2, #Color2 path {
+    fill: $navbar-link-font-color-active;
+  }
+}
+
+
+// off canvas
+@media only screen and (max-width: $breakpoint-xs) {
+  .nav.nav--top.nav--off-canvas {
+      //display: block;
+    .nav__links {
+      background: $nav-off-canvas-bg-color;
+      bottom: 0;
+      display: block;
+      padding: 0;
+      position: fixed;
+      right: 0;
+      transform: translateX(100%);
+      top: 0;
+      width: 285px;
+      transition: .33s;
+      li {
+        display: block;
+        line-height: $line-height * 1.5;
+        padding: 0;
+      }
+      a {
+        display: block;
+        padding: 0 $lead-single;
+        position: relative;
+        width: 100%;
+        &:hover {
+          background-color: $nav-off-canvas-link-bg-color-hover;
+          transition: .33s;
+        }
+      }
+      a.is-active {
+        color: $navbar-link-font-color-active;
+        &:before {
+          width: $navbar-link-indicator-height;
+          height: 100%;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      .button {
+        width: 100%;
+      }
+    }
+    .nav__menu-toggle {
+      color: $nav-menu-toggle-font-color;
+      cursor: pointer;
+      display: block;
+      padding: $lead-half;
+      z-index: 15;
+      &:before {
+        font-family: 'juicons' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        content: "\e923";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: all 0.25s ease-in;
+        display: block;
+      }
+    }
+    &.is-visible {
+      .nav__links {
+        box-shadow: $box-shadow-2;
+        transform: translateX(0);
+      }
+    }
+  }
+}

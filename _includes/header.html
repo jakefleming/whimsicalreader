@@ -1,8 +1,28 @@
-<header id="masthead">
-  <div class="inner-wrap">
-    <a href="{{ site.url }}/" class="site-title">{{ site.title }}</a>
-    <nav role="navigation" class="menu top-menu">
-        {% include navigation.html %}
-    </nav>
-  </div><!-- /.inner-wrap -->
-</header><!-- /.masthead -->
+<header>
+  <nav class="nav nav--top nav--fixed nav--off-canvas">
+    <div class="nav__container">
+      <div class="nav__brand">
+        <div class="nav__logo">
+          <a href="{{ site.url }}/"><img class="svg" src="images/logo.svg" alt="{{ site.title }}"></a>
+        </div>
+        <div class="nav__brand-text">
+          {{ site.title }}
+        </div>
+      </div>
+      <ul class="nav__links">
+
+  			{% for link in site.data.navigation %}
+  		    {% if link.url contains 'http' %}
+  		        {% assign domain = '' %}
+  		        {% else %}
+  		        {% assign domain = site.url %}
+  		    {% endif %}
+  		    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+  		  {% endfor %}
+
+      </ul>
+      <div class="nav__overlay"></div>
+      <div class="nav__menu-toggle"><div class="visuallyhidden">Navigation Menu</div></div>
+    </div>
+  </nav>
+</header>

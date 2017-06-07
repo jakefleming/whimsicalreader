@@ -1,0 +1,60 @@
+.button {
+  box-sizing: border-box;
+  border-radius: $border-radius-1;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $ui-stack;
+  font-size: $type-scale-2;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: $lead-half;
+  font-size: $type-scale-2;
+  padding: $lead-half $lead-single;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .33s;
+  vertical-align: top;
+  &:active {
+    box-shadow: none;
+  }
+  &--full {
+    width: 100%;
+  }
+  &--elevated {
+    box-shadow: $box-shadow-1;
+  }
+  &--neutral {
+    background: $button-neutral-bg-color;
+    color: $button-neutral-font-color;
+    &:hover {
+      background: $button-neutral-bg-color-hover;
+      color: $button-neutral-font-color;
+    }
+  }
+  &--primary {
+    background: $button-primary-bg-color;
+    color: $button-primary-font-color;
+    &:hover {
+      background: $button-primary-bg-color-hover;
+      color: $button-primary-font-color;
+    }
+  }
+  &--secondary {
+    background: $button-secondary-bg-color;
+    color: $button-secondary-font-color;
+    &:hover {
+      background: $button-secondary-bg-color-hover;
+      color: $button-secondary-font-color;
+    }
+  }
+  &--accent {
+    background: $button-accent-bg-color;
+    color: $button-accent-font-color;
+    &:hover {
+      background: $button-accent-bg-color-hover;
+      color: $button-accent-font-color;
+    }
+  }
+}

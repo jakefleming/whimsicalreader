@@ -1,0 +1,260 @@
+/*------------------------------------------------------------------------*\
+  BASE COLORS (PULLED FROM COLOR-PALETTE)
+\*------------------------------------------------------------------------*/
+$base-color-neutral:          palette(neutral, C5);
+$base-color-neutral-dark:     palette(neutral, C7);
+$base-color-primary:          palette(blue-violet, C5);
+$base-color-primary-dark:     palette(blue-violet, C7);
+$base-color-secondary:        palette(orange, C3);
+$base-color-secondary-dark:   palette(orange, C5);
+$base-color-accent:           palette(blue-green, C5);
+$base-color-accent-dark:      palette(blue-green, C7);
+
+
+/*------------------------------------------------------------------------*\
+  BASE GRADIENTS
+\*------------------------------------------------------------------------*/
+$base-color-gradient-start:        rgba($base-color-primary, 0.5);
+$base-color-gradient-end:          rgba($base-color-primary-dark, 0.75);
+
+
+/*------------------------------------------------------------------------*\
+  BASE FONT STACKS
+\*------------------------------------------------------------------------*/
+$display-stack:   Haversack-UI,'Source Sans Pro', sans-serif;
+$body-stack:      'Source Serif Pro', serif;
+$mono-stack:      'Source Code Pro', monospace;
+$ui-stack:        Haversack-UI, 'Source Sans Pro', sans-serif;
+
+
+/*------------------------------------------------------------------------*\
+  BASE TYPE SCALE
+\*------------------------------------------------------------------------*/
+$type-scale:    20px;
+$scale:         1.5;
+$line-height:   $type-scale * $scale;
+
+$type-scale-1:    round($type-scale * .65);
+$type-scale-2:    round($type-scale * .75);
+$type-scale-3:    round($type-scale * 1);
+$type-scale-4:    round($type-scale * $scale);
+$type-scale-5:    round($type-scale * $scale * $scale);
+$type-scale-6:    round($type-scale * $scale * $scale * $scale);
+
+
+/*------------------------------------------------------------------------*\
+  BASE FONT SIZES
+\*------------------------------------------------------------------------*/
+$body-font-size:    $type-scale-3;
+
+
+/*------------------------------------------------------------------------*\
+  BASE FONT WEIGHTS
+\*------------------------------------------------------------------------*/
+$font-weight-light:     300;
+$font-weight-normal:    400;
+$font-weight-bold:      600;
+
+
+/*------------------------------------------------------------------------*\
+  BASE FONT COLORS
+\*------------------------------------------------------------------------*/
+$display-font-color:      palette(neutral, C9);
+$body-font-color:         palette(neutral, C7);
+$link-font-color:         $base-color-accent;
+$link-font-color-hover:   $base-color-accent-dark;
+$font-color-muted:        palette(neutral, C5);
+
+
+/*------------------------------------------------------------------------*\
+  BASE TAG GROUPS
+\*------------------------------------------------------------------------*/
+$headlineCopyTags:    "h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6";
+$bodyCopyTags:        "p, tt, ul, ol, dl, blockquote";
+$inlineCopyTags:      "a, span";
+
+
+/*------------------------------------------------------------------------*\
+  BASE BREAKPOINTS
+\*------------------------------------------------------------------------*/
+$breakpoint-xs:   768px;
+$breakpoint-sm:   768px;
+$breakpoint-md:   992px;
+$breakpoint-lg:   1200px;
+$breakpoint-xl:   1400px;
+
+
+/*------------------------------------------------------------------------*\
+  BASE RADIUS
+\*------------------------------------------------------------------------*/
+$border-radius-1:   3px;
+
+
+/*------------------------------------------------------------------------*\
+  BASE BOX SHADOWS
+\*------------------------------------------------------------------------*/
+$box-shadow-1:    0 3px 6px rgba(0,0,0,.15);
+$box-shadow-2:    0 6px 12px rgba(0,0,0,.30);
+
+
+/*------------------------------------------------------------------------*\
+  BASE TRANSITIONS
+\*------------------------------------------------------------------------*/
+$transition-on:       all 0.15s ease-in;
+$transition-off:      all 0.25s ease-out;
+
+
+/*------------------------------------------------------------------------*\
+  HELPER SPACING
+\*------------------------------------------------------------------------*/
+$lead-third:        $line-height / 3;
+.lead-third       { margin-bottom: $line-height / 3; }
+
+$lead-half:         $line-height / 2;
+.lead-half        { margin-bottom: $line-height / 2; }
+
+$lead-single:       $line-height;
+.lead-single      { margin-bottom: $line-height; }
+
+$lead-double:       $line-height * 2;
+.lead-double      { margin-bottom: $line-height * 2; }
+
+$lead-triple:       $line-height * 3;
+.lead-triple      { margin-bottom: $line-height * 3; }
+
+$lead-quadruple:    $line-height * 4;
+.lead-quadruple   { margin-bottom: $line-height * 4; }
+
+$lead-quintuple:    $line-height * 5;
+.lead-quintuple   { margin-bottom: $line-height * 5; }
+
+
+/*------------------------------------------------------------------------*\
+  GRID
+\*------------------------------------------------------------------------*/
+$container-max-width:     1200px;
+$container-pad:           $lead-half;
+
+
+/*------------------------------------------------------------------------*\
+  ALERTS
+\*------------------------------------------------------------------------*/
+$alert-error-bg-color:          palette(red, C5);
+$alert-success-bg-color:        palette(green, C5);
+$alert-info-bg-color:           palette(blue, C5);
+$alert-warning-bg-color:        palette(yellow, C5);
+
+$alert-error-border-color:      palette(red, C6);
+$alert-success-border-color:    palette(green, C6);
+$alert-info-border-color:       palette(blue, C6);
+$alert-warning-border-color:    palette(yellow, C6);
+
+$alert-error-font-color:        palette(red, C8);
+$alert-success-font-color:      palette(green, C8);
+$alert-info-font-color:         palette(blue, C8);
+$alert-warning-font-color:      palette(yellow, C8);
+
+
+/*------------------------------------------------------------------------*\
+  FORM ELEMENTS
+\*------------------------------------------------------------------------*/
+$input-bg-color:      palette(neutral, C2);
+$input-font-color:    $body-font-color;
+$label-font-color:    $display-font-color;
+$input-box-shadow:    inset 0 0 0 1px palette(neutral, C3), inset 0 1px 3px rgba(0,0,0,.1);
+
+
+/*------------------------------------------------------------------------*\
+  BUTTONS
+\*------------------------------------------------------------------------*/
+$button-neutral-bg-color:           $base-color-neutral;
+$button-neutral-bg-color-hover:     $base-color-neutral-dark;
+$button-neutral-font-color:         white;
+
+$button-primary-bg-color:           $base-color-primary;
+$button-primary-bg-color-hover:     $base-color-primary-dark;
+$button-primary-font-color:         white;
+
+$button-secondary-bg-color:         $base-color-secondary;
+$button-secondary-bg-color-hover:   $base-color-secondary-dark;
+$button-secondary-font-color:       white;
+
+$button-accent-bg-color:            $base-color-accent;
+$button-accent-bg-color-hover:      $base-color-accent-dark;
+$button-accent-font-color:          white;
+
+
+/*------------------------------------------------------------------------*\
+  PAGES
+\*------------------------------------------------------------------------*/
+$page-heading-font-color:       $display-font-color;
+$page-subheading-font-color:    $body-font-color;
+
+
+/*------------------------------------------------------------------------*\
+  SECTIONS
+\*------------------------------------------------------------------------*/
+$section-border-color:    palette(neutral, C2);
+$section-padding:         $lead-triple;
+
+
+/*------------------------------------------------------------------------*\
+  HEROES
+\*------------------------------------------------------------------------*/
+$hero-bg-color:     palette(neutral, C1);
+$hero-font-color:   palette(neutral, C9);
+
+
+/*------------------------------------------------------------------------*\
+  ALERTS
+\*------------------------------------------------------------------------*/
+$alert-font-color:  rgba(255,255,255,.8);
+
+
+/*------------------------------------------------------------------------*\
+  NAVS
+\*------------------------------------------------------------------------*/
+$nav-logo-size:                         $lead-double;
+$navbar-padding:                        $lead-half;
+$navbar-height:                         $nav-logo-size + ($navbar-padding * 2); /* TODO: This is a magic number, prone to breaking. Need something more bulletproof. */
+$navbar-bg-color:                       white;
+$navbar-link-font-color:                $base-color-accent;
+$navbar-link-font-color-hover:          $base-color-accent-dark;
+$navbar-link-font-color-active:         palette(neutral, C5);
+$navbar-link-indicator-height:          5px;
+$navbar-link-indicator-bg-color:        $base-color-accent;
+$nav-off-canvas-bg-color:               palette(neutral, C9);
+$nav-overlay-bg-color:                  palette(neutral, C9);
+$nav-menu-toggle-font-color:            $base-color-accent;
+$nav-off-canvas-link-bg-color-hover:    palette(neutral, C10);
+
+$nav-side-width:              200px;
+$nav-side-width-collapsed:    50px;
+
+$nav-side-bg-color:                 palette(neutral, C9);
+$nav-side-link-font-color:          palette(neutral, C1);
+$nav-side-link-font-color-hover:    palette(neutral, C2);
+$nav-side-link-bg-color-hover:      palette(neutral, C10);
+
+/*------------------------------------------------------------------------*\
+  FOOTERS
+\*------------------------------------------------------------------------*/
+$footer-bg-color:                   palette(neutral, C8);
+$footer-brand-font-color:           palette(neutral, C6);
+$footer-link-font-color:            palette(neutral, C6);
+$footer-link-heading-font-color:    palette(neutral, C5);
+
+
+/*------------------------------------------------------------------------*\
+  CARDS
+\*------------------------------------------------------------------------*/
+$card-author-img-bg-color:    $base-color-accent;
+
+
+/*------------------------------------------------------------------------*\
+  Z-INDEXES
+\*------------------------------------------------------------------------*/
+$z-index: (
+  navigation: 500,
+  modal: 200
+);

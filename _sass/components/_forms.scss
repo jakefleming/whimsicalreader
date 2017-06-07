@@ -1,0 +1,184 @@
+.form-element {
+  appearance: none;
+  background: $input-bg-color;
+  border: 0;
+  box-shadow: $input-box-shadow;
+  border-radius: $border-radius-1;
+  box-sizing: border-box;
+  color: $input-font-color;
+  display: inline-block;
+  font-weight: $font-weight-normal;
+  letter-spacing: 1px;
+  line-height: $lead-single;
+  font-size: $type-scale-2;
+  padding: $lead-single/4 $lead-half;
+  text-decoration: none;
+  vertical-align: top;
+  &--text {
+    height: $line-height * 1.5;
+  }
+  &--textarea {
+    height: $line-height * 4;
+    resize: none;
+  }
+  &--select {
+    height: $line-height * 1.5;
+    cursor: pointer;
+  }
+  &--fw {
+    width: 100%;
+  }
+  //has icon
+  &--icon {
+    padding-right: $lead-single*1.5;
+  }
+
+  //checkboxes & radios
+  &--check, &--radio {
+    appearance: none;
+    background: $input-bg-color;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    height: $line-height;
+    outline: none !important;
+    vertical-align: bottom;
+    width: $line-height;
+    position: relative;
+    transition: .33s;
+    display: inline-block;
+    vertical-align: top;
+    + .form-element__option {
+      margin-left: $lead-single/3;
+    }
+    &:checked {
+      box-shadow: none;
+    }
+  }
+
+  //checkboxes
+  &--check {
+    border-radius: $border-radius-1;
+    &:after {
+      color: white;
+      position: absolute;
+      transition: .33s;
+      font-family: 'juicons' !important;
+      content: "\e95e";
+      display: block;
+      font-size: $type-scale-2;
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      opacity: 0;
+      padding: 1px 0 0 1px;
+      pointer-events: none;
+      transform: translateY(-50%) translateX(-50%);
+      top: 50%;
+      left: 50%;
+    }
+    &:checked {
+      background: $base-color-accent;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  //radio
+  &--radio {
+    border-radius: 50%;
+    &:after {
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      -webkit-transition: .33s;
+      transition: .33s;
+      font-family: 'juicons' !important;
+      content: "";
+      display: block;
+      font-size: 20px;
+      width: $line-height/3;
+      text-align: center;
+      height: $line-height/3;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+    &:checked {
+      background: $base-color-accent;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  //lists
+  &-list {
+    padding: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  &__option {
+    font-family: $body-stack;
+    font-size: $body-font-size;
+    font-weight: $font-weight-normal;
+    text-transform: none;
+  }
+}
+
+.label {
+  color: $label-font-color;
+  display: inline-block;
+  font-family: $display-stack;
+  font-size: $type-scale-2;
+  font-weight: $font-weight-bold;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.form {
+  .label {
+    display: block;
+  }
+}
+
+.form-element-wrap {
+  position: relative;
+  .icon {
+    font-size: $type-scale-2;
+    line-height: $lead-single;
+    padding: $lead-single/4 $lead-half;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+  }
+}
+
+// DISABLED
+.is-disabled {
+  opacity: .3;
+}
+
+
+// ERRORS
+.form-element-group, .form-element-list {
+  &.has-error {
+    .form-element--text,
+    .form-element--textarea,
+    .form-element--check,
+    .form-element--radio,
+    .form-element--select {
+      box-shadow: 0 0 0 1px $alert-error-border-color, 0 0 3px 3px transparentize($alert-error-bg-color, .5);
+    }
+    .caption, .label {
+      color: $alert-error-font-color;
+    }
+  }
+}

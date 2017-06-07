@@ -1,0 +1,102 @@
+.image {
+  display: block;
+  height: auto;
+  max-width: 100%;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    background: rgba(palette(neutral, C5), 0.1);
+
+    & > img,
+    & > figure > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &.image--round,
+    &.image--round > img {
+      border-radius: 50%;
+    }
+
+    /* LOADING SPINNER */
+    &:after {
+      content: '';
+      display: block;
+      box-sizing: border-box;
+      border-radius: 50%;
+      width: $lead-single;
+      height: $lead-single;
+      border: round($lead-half/2) solid rgba(white, 0.1);
+      border-top-color: rgba(palette(neutral, C5), 0.15);
+      position: absolute;
+      top: calc(50% - 15px);
+      left: calc(50% - 15px);
+      animation: spin 1s infinite cubic-bezier(0.8, 0.2, 0, 1.0);
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &--bleed-left, &--bleed-right {
+    width: 125%;
+    max-width: 125%;
+  }
+  &--bleed-left {
+    margin-left: -25%;
+  }
+  &--bleed-right {
+    margin-right: -25%;
+  }
+  &--small, &.image--small img {
+    max-height: $lead-double;
+  }
+  &--medium, &.image--medium img {
+    max-height: $lead-quintuple;
+  }
+  &--right, &.image--right img {
+    float: right;
+    margin-left: $lead-double;
+    max-width: 33vw;
+  }
+  &--left, &.image--left img {
+    float: left;
+    margin-right: $lead-double;
+    max-width: 33vw;
+  }
+  &--full, &.image--full img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.row.flex-columns > [class^="col-"] {
+  & > .image {
+    align-self: auto;
+  }
+}
+
+figure {
+  margin: 0;
+
+  .image__wrapper,
+  .image {
+    margin: 0;
+  }
+
+  figcaption {
+    @extend .text-small;
+    background-color: rgba(palette(neutral, C5), 0.17);
+    padding: $lead-half $lead-half $lead-single;
+  }
+}

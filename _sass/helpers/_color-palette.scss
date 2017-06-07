@@ -1,0 +1,184 @@
+/*------------------------------------------------------------------------*\
+  COLORS
+\*------------------------------------------------------------------------*/
+
+// Warm
+$red-violet-hue:      330;
+$red-hue:             0;
+$red-orange-hue:      15;       // Warmest pole
+$orange-hue:          30;
+$yellow-orange-hue:   45;
+$yellow-hue:          60;       // Lightest pole
+// Cool
+$yellow-green-hue:    90;
+$green-hue:           120;
+$blue-green-hue:      180;      // Coolest pole
+$blue-hue:            240;
+$blue-violet-hue:     270;
+$violet-hue:          300;      // Darkest pole
+
+$neutral-hue:         224;
+
+$palettes: (
+  // DEFAULT
+  red-violet:(
+    C1:   hsla($red-violet-hue, 5%, 95%, 1),
+    C2:   hsla($red-violet-hue, 15%, 85%, 1),
+    C3:   hsla($red-violet-hue, 25%, 75%, 1),
+    C4:   hsla($red-violet-hue, 35%, 65%, 1),
+    C5:   hsla($red-violet-hue, 45%, 55%, 1),
+    C6:   hsla($red-violet-hue, 55%, 45%, 1),
+    C7:   hsla($red-violet-hue, 65%, 35%, 1),
+    C8:   hsla($red-violet-hue, 75%, 25%, 1),
+    C9:   hsla($red-violet-hue, 85%, 15%, 1),
+    C10:  hsla($red-violet-hue, 95%, 5%, 1)
+  ),
+  red:(
+    C1:   hsla($red-hue, 5%, 95%, 1),
+    C2:   hsla($red-hue, 15%, 85%, 1),
+    C3:   hsla($red-hue, 25%, 75%, 1),
+    C4:   hsla($red-hue, 35%, 65%, 1),
+    C5:   hsla($red-hue, 45%, 55%, 1),
+    C6:   hsla($red-hue, 55%, 45%, 1),
+    C7:   hsla($red-hue, 65%, 35%, 1),
+    C8:   hsla($red-hue, 75%, 25%, 1),
+    C9:   hsla($red-hue, 85%, 15%, 1),
+    C10:  hsla($red-hue, 95%, 5%, 1)
+  ),
+  red-orange:(
+    C1:   hsla($red-orange-hue, 5%, 95%, 1),
+    C2:   hsla($red-orange-hue, 15%, 85%, 1),
+    C3:   hsla($red-orange-hue, 25%, 75%, 1),
+    C4:   hsla($red-orange-hue, 35%, 65%, 1),
+    C5:   hsla($red-orange-hue, 45%, 55%, 1),
+    C6:   hsla($red-orange-hue, 55%, 45%, 1),
+    C7:   hsla($red-orange-hue, 65%, 35%, 1),
+    C8:   hsla($red-orange-hue, 75%, 25%, 1),
+    C9:   hsla($red-orange-hue, 85%, 15%, 1),
+    C10:  hsla($red-orange-hue, 95%, 5%, 1)
+  ),
+  orange:(
+    C1:   hsla($orange-hue, 5%, 95%, 1),
+    C2:   hsla($orange-hue, 15%, 85%, 1),
+    C3:   hsla($orange-hue, 25%, 75%, 1),
+    C4:   hsla($orange-hue, 35%, 65%, 1),
+    C5:   hsla($orange-hue, 45%, 55%, 1),
+    C6:   hsla($orange-hue, 55%, 45%, 1),
+    C7:   hsla($orange-hue, 65%, 35%, 1),
+    C8:   hsla($orange-hue, 75%, 25%, 1),
+    C9:   hsla($orange-hue, 85%, 15%, 1),
+    C10:  hsla($orange-hue, 95%, 5%, 1)
+  ),
+  yellow-orange:(
+    C1:   hsla($yellow-orange-hue, 5%, 95%, 1),
+    C2:   hsla($yellow-orange-hue, 15%, 85%, 1),
+    C3:   hsla($yellow-orange-hue, 25%, 75%, 1),
+    C4:   hsla($yellow-orange-hue, 35%, 65%, 1),
+    C5:   hsla($yellow-orange-hue, 45%, 55%, 1),
+    C6:   hsla($yellow-orange-hue, 55%, 45%, 1),
+    C7:   hsla($yellow-orange-hue, 65%, 35%, 1),
+    C8:   hsla($yellow-orange-hue, 75%, 25%, 1),
+    C9:   hsla($yellow-orange-hue, 85%, 15%, 1),
+    C10:  hsla($yellow-orange-hue, 95%, 5%, 1)
+  ),
+  yellow:(
+    C1:   hsla($yellow-hue, 5%, 95%, 1),
+    C2:   hsla($yellow-hue, 15%, 85%, 1),
+    C3:   hsla($yellow-hue, 25%, 75%, 1),
+    C4:   hsla($yellow-hue, 35%, 65%, 1),
+    C5:   hsla($yellow-hue, 45%, 55%, 1),
+    C6:   hsla($yellow-hue, 55%, 45%, 1),
+    C7:   hsla($yellow-hue, 65%, 35%, 1),
+    C8:   hsla($yellow-hue, 75%, 25%, 1),
+    C9:   hsla($yellow-hue, 85%, 15%, 1),
+    C10:  hsla($yellow-hue, 95%, 5%, 1)
+  ),
+  yellow-green:(
+    C1:   hsla($yellow-green-hue, 5%, 95%, 1),
+    C2:   hsla($yellow-green-hue, 15%, 85%, 1),
+    C3:   hsla($yellow-green-hue, 25%, 75%, 1),
+    C4:   hsla($yellow-green-hue, 35%, 65%, 1),
+    C5:   hsla($yellow-green-hue, 45%, 55%, 1),
+    C6:   hsla($yellow-green-hue, 55%, 45%, 1),
+    C7:   hsla($yellow-green-hue, 65%, 35%, 1),
+    C8:   hsla($yellow-green-hue, 75%, 25%, 1),
+    C9:   hsla($yellow-green-hue, 85%, 15%, 1),
+    C10:  hsla($yellow-green-hue, 95%, 5%, 1)
+  ),
+  green:(
+    C1:   hsla($green-hue, 5%, 95%, 1),
+    C2:   hsla($green-hue, 15%, 85%, 1),
+    C3:   hsla($green-hue, 25%, 75%, 1),
+    C4:   hsla($green-hue, 35%, 65%, 1),
+    C5:   hsla($green-hue, 45%, 55%, 1),
+    C6:   hsla($green-hue, 55%, 45%, 1),
+    C7:   hsla($green-hue, 65%, 35%, 1),
+    C8:   hsla($green-hue, 75%, 25%, 1),
+    C9:   hsla($green-hue, 85%, 15%, 1),
+    C10:  hsla($green-hue, 95%, 5%, 1)
+  ),
+  blue-green:(
+    C1:   hsla($blue-green-hue, 5%, 95%, 1),
+    C2:   hsla($blue-green-hue, 15%, 85%, 1),
+    C3:   hsla($blue-green-hue, 25%, 75%, 1),
+    C4:   hsla($blue-green-hue, 35%, 65%, 1),
+    C5:   hsla($blue-green-hue, 45%, 55%, 1),
+    C6:   hsla($blue-green-hue, 55%, 45%, 1),
+    C7:   hsla($blue-green-hue, 65%, 35%, 1),
+    C8:   hsla($blue-green-hue, 75%, 25%, 1),
+    C9:   hsla($blue-green-hue, 85%, 15%, 1),
+    C10:  hsla($blue-green-hue, 95%, 5%, 1)
+  ),
+  blue:(
+    C1:   hsla($blue-hue, 5%, 95%, 1),
+    C2:   hsla($blue-hue, 15%, 85%, 1),
+    C3:   hsla($blue-hue, 25%, 75%, 1),
+    C4:   hsla($blue-hue, 35%, 65%, 1),
+    C5:   hsla($blue-hue, 45%, 55%, 1),
+    C6:   hsla($blue-hue, 55%, 45%, 1),
+    C7:   hsla($blue-hue, 65%, 35%, 1),
+    C8:   hsla($blue-hue, 75%, 25%, 1),
+    C9:   hsla($blue-hue, 85%, 15%, 1),
+    C10:  hsla($blue-hue, 95%, 5%, 1)
+  ),
+  blue-violet:(
+    C1:   hsla($blue-violet-hue, 5%, 95%, 1),
+    C2:   hsla($blue-violet-hue, 15%, 85%, 1),
+    C3:   hsla($blue-violet-hue, 25%, 75%, 1),
+    C4:   hsla($blue-violet-hue, 35%, 65%, 1),
+    C5:   hsla($blue-violet-hue, 45%, 55%, 1),
+    C6:   hsla($blue-violet-hue, 55%, 45%, 1),
+    C7:   hsla($blue-violet-hue, 65%, 35%, 1),
+    C8:   hsla($blue-violet-hue, 75%, 25%, 1),
+    C9:   hsla($blue-violet-hue, 85%, 15%, 1),
+    C10:  hsla($blue-violet-hue, 95%, 5%, 1)
+  ),
+  violet:(
+    C1:   hsla($violet-hue, 5%, 95%, 1),
+    C2:   hsla($violet-hue, 15%, 85%, 1),
+    C3:   hsla($violet-hue, 25%, 75%, 1),
+    C4:   hsla($violet-hue, 35%, 65%, 1),
+    C5:   hsla($violet-hue, 45%, 55%, 1),
+    C6:   hsla($violet-hue, 55%, 45%, 1),
+    C7:   hsla($violet-hue, 65%, 35%, 1),
+    C8:   hsla($violet-hue, 75%, 25%, 1),
+    C9:   hsla($violet-hue, 85%, 15%, 1),
+    C10:  hsla($violet-hue, 95%, 5%, 1)
+  ),
+  neutral:(
+    C1:   hsla($neutral-hue, 2%, 95%, 1),
+    C2:   hsla($neutral-hue, 4%, 85%, 1),
+    C3:   hsla($neutral-hue, 6%, 75%, 1),
+    C4:   hsla($neutral-hue, 8%, 65%, 1),
+    C5:   hsla($neutral-hue, 10%, 55%, 1),
+    C6:   hsla($neutral-hue, 12%, 45%, 1),
+    C7:   hsla($neutral-hue, 14%, 35%, 1),
+    C8:   hsla($neutral-hue, 16%, 25%, 1),
+    C9:   hsla($neutral-hue, 18%, 15%, 1),
+    C10:  hsla($neutral-hue, 20%, 5%, 1)
+  )
+);
+
+@function palette($palette, $tone: 'neutral') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}

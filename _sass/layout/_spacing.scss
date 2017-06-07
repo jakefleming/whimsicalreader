@@ -1,0 +1,59 @@
+// ZERO OUT TOP MARGINS
+
+#{$bodyCopyTags}, #{$headlineCopyTags}, #{$inlineCopyTags}{
+  margin: 0;
+}
+
+// MARGIN BOTTOM ZERO
+.form-element__wrap {
+  .form-element--text {
+    margin: 0;
+  }
+}
+
+// MARGIN BOTTOM THIRD
+
+// MARGIN BOTTOM HALF
+
+.section--hero .page-heading,
+.hero__heading,
+legend.label,
+.form-element--check,
+.form-element--radio,
+.alert,
+.form-element,
+.button,
+.section__title  {
+  margin-bottom: $lead-half;
+}
+
+// MARGIN BOTTOM SINGLE
+
+.card, .form-element-group,
+.form-element__wrap,
+.hero__subheading,
+.section--hero .page__title,
+.section--hero .page__subtitle,
+.text-block,
+.image__wrapper {
+  margin-bottom: $lead-single;
+}
+
+p + p {
+  margin-top: $lead-single;
+}
+
+// MARGIN BOTTOM DOUBLE
+
+.content-block
+{
+  margin-bottom: $lead-double;
+}
+
+
+// PADDING TOP | BOTTOM TRIPLE
+
+.section {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
