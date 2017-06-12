@@ -39,7 +39,12 @@
     <script src="{{ site.url }}/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="{{ site.url }}/js/vendor/layzr.js"></script>
     <script src="{{ site.url }}/js/main.js"></script>
-
+    <script>
+      var __vars = {
+        data: {{ site }}
+      };
+      console.log(__vars.data);
+    </script>
   </body>
 
 </html>

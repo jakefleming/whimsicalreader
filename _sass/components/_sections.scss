@@ -16,6 +16,27 @@
       background: transparentize((darken($base-color-accent, 70%)),.3);
     }
   }
+
+  &--bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    * {
+      z-index: 2;
+    }
+
+    &-light:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(255,255,255,0.9);
+      z-index: 1;
+    }
+  }
   &--primary {
     background: $base-color-primary;
     color: white;

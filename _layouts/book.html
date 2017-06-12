@@ -5,12 +5,31 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-xs">
-        <h1>{{ page.title }}
-        <div class="book-cover">
-          <a href="{{ page.sellerUrl }}">
-            <img src="{{ site.url }}/images/{{ page.imageBase }}{{ page.image.cover }}" alt="Book cover for {{ page.title }}"/>
-          </a>
+        <div class="book__title-section">
+          <h3>Today's Book</h3>
+          <h1>{{ page.title }}</h1>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--bg section--bg-light" style="background-image: url({{ site.url }}/images/{{ page.imageBase }}{{ page.image.teaser }});">
+  <div class="container">
+    <div class="row book__hero-section">
+      <div class="col-sm-6">
+        <a class="book__cover" href="{{ page.sellerUrl }}">
+          <img src="{{ site.url }}/images/{{ page.imageBase }}{{ page.image.cover }}" alt="Book cover for {{ page.title }}"/>
+        </a>
+      </div>
+      <div class="col-sm-6">
+        <h2>Description</h2>
+        <p>{{ page.excerpt }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
         <div class="book__meta">
           <h3>Meta data</h3>
           {% if page.author %}{{ page.author | prepend: "<p><em>Author:</em> " | append: "</p>" }}{% endif %}

@@ -75,12 +75,32 @@
   <div class="container">
     <div class="row">
       <div class="col-xs">
-        <h1>The Very Hungry Caterpillar
-        <div class="book-cover">
-          <a href="https://www.amazon.com/gp/product/0399226907/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=whimsicalread-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0399226907&linkId=40e3494f4eb6446f651a016a32122209">
-            <img src="/images/books/the-very-hungry-caterpillar/the-very-hungry-caterpillar-cover.jpg" alt="Book cover for The Very Hungry Caterpillar"/>
-          </a>
+        <div class="book__title-section">
+          <h3>Today's Book</h3>
+          <h1>The Very Hungry Caterpillar</h1>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--bg section--bg-light" style="background-image: url(/images/books/the-very-hungry-caterpillar/the-very-hungry-caterpillar-cover.jpg);">
+  <div class="container">
+    <div class="row book__hero-section">
+      <div class="col-sm-6">
+        <a class="book__cover" href="https://www.amazon.com/gp/product/0399226907/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=whimsicalread-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0399226907&linkId=40e3494f4eb6446f651a016a32122209">
+          <img src="/images/books/the-very-hungry-caterpillar/the-very-hungry-caterpillar-cover.jpg" alt="Book cover for The Very Hungry Caterpillar"/>
+        </a>
+      </div>
+      <div class="col-sm-6">
+        <h2>Description</h2>
+        <p>
+</p>
+      </div>
+    </div>
+  </div>
+</section>
+
         <div class="book__meta">
           <h3>Meta data</h3>
           <p><em>Author:</em> Eric Carle</p>
@@ -152,7 +172,12 @@
     <script src="/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="/js/vendor/layzr.js"></script>
     <script src="/js/main.js"></script>
-
+    <script>
+      var __vars = {
+        data: Jekyll::Drops::SiteDrop
+      };
+      console.log(__vars.data);
+    </script>
   </body>
 
 </html>
